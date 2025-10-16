@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+int main() {
+    char n[100];
+    printf("Enter number of boxes :");
+    scanf("%s",&n);
+    int s=0;
+    while(n[s]!=0){
+        s++;
+    }
+    int ans[100];
+for (int i=1; i<s;i++){
+    int moves=0;
+    for (int j=1;j<s;j++){
+        if (n[j] ==1){
+            moves+=abs(i-j);
+        }
+    ans[i]=moves;
+    }
+for (int k=0;k<s;k++){
+    printf("The number of moves of box  %d are",k+1);
+    printf("%d", ans[k]);
+    printf("\n");
+}
+    return 0;
+}
+}
+
+    
+    
+
+
+
+    
